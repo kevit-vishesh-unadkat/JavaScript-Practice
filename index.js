@@ -202,4 +202,43 @@ console.log(c);
 
 //so bassically flat method is return a new array. 
 // we have to define how much layer we want to flat the array .
-//
+
+
+console.log(Array.isArray([1,2,3]));
+console.log(Array.isArray("Hello"));
+
+//Array.isArray ->checks whether a vlaues is an array.
+
+const fruits=['apple','banana','orange'];
+
+for (let keys of fruits.keys())
+{
+    console.log(keys);
+}
+
+for(let values of fruits.values())
+{
+    console.log(values);
+}
+
+const numbers=[10,20,30];
+for(let num of numbers)
+{
+    console.log(num);
+}
+
+console.log(numbers.at(2));  // it will return at particular index element.
+
+// negative index is also possible in js
+
+console.log(numbers.at(-2));
+console.log(numbers.at(-1));
+
+//spread operation 
+
+const frontend=['HTML','CSS'];
+const backend=['Node','express'];
+
+const skills=[...frontend,...backend];
+console.log(skills);
+
