@@ -227,12 +227,12 @@ for(let num of numbers)
     console.log(num);
 }
 
-console.log(numbers.at(2));  // it will return at particular index element.
+// console.log(numbers.at(1));  // it will return at particular index element.
 
 // negative index is also possible in js
 
-console.log(numbers.at(-2));
-console.log(numbers.at(-1));
+// console.log(numbers.at(-2));
+// console.log(numbers.at(-1));
 
 //spread operation 
 
@@ -242,3 +242,15 @@ const backend=['Node','express'];
 const skills=[...frontend,...backend];
 console.log(skills);
 
+
+//destructuring of array in javascript
+const num=[10,20,30,40,50];
+const [first, ,third,]=num;
+console.log(first);
+console.log(third);
+
+const [first1, ...rest]=num;
+console.log(first1);
+console.log(rest);
+
+//for rest it will return an array of remaining element of the array after destructuring.
