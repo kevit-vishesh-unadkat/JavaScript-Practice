@@ -10,3 +10,40 @@
 //but all varibles are set to undifined 
 // actual values are set in second phase 
 //in execution phase
+
+
+console.log(name);
+var name="vishesh"; 
+
+var name;
+
+console.log(name);
+name="vishesh";
+
+console.log(age);
+var age=21;
+
+var age;
+console.log(age);
+age=21;
+
+//function declarion hoisting
+
+greet();
+function greet()
+{
+    console.log("hello");
+}
+
+
+addNumber(10,20);
+function addNumber(a,b)
+{
+    console.log(a+b);
+}
+
+// sayHello();
+
+// const sayHello=function(){
+//     console.log("Hello");
+// }
