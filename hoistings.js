@@ -47,3 +47,45 @@ function addNumber(a,b)
 // const sayHello=function(){
 //     console.log("Hello");
 // }
+
+
+//hoisting and redclaration
+
+var x= 10;
+var x=20;
+
+console.log(x);
+
+//let and const are not hoisted 
+//and they are not redclared
+
+// let y=10;
+// let y=20;
+
+
+
+//var is a function scope
+
+function test()
+{
+    if(true)
+    {
+        var msg="Hello";
+    }
+    console.log(msg);
+}
+
+test(); 
+
+
+//but let is block scope
+
+function test1(){
+    if(true)
+    {
+        let msg="Hello";
+        console.log(msg);
+    }
+    console.log(msg); // it will give error because msg is not defined in this scope (refrence error.)
+}
+test1();    
