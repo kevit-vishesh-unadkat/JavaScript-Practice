@@ -254,3 +254,82 @@ console.log(first1);
 console.log(rest);
 
 //for rest it will return an array of remaining element of the array after destructuring.
+
+
+let num1=[10,20,30,40,50];
+num1.length=2;
+num1.length=0;
+console.log(num1);
+//so in js we can change the length of an array 
+//and it will remove the extra element from the array.
+
+console.log(typeof num1);
+
+const num2=Array.from([1,2,3],x=>x*2);
+console.log(num2);
+
+
+//reduce example in js
+
+const cart=[
+    {price:20},
+    {price:30},
+    {price:50}
+];
+
+const total =cart.reduce((sum,item)=>sum+item.price,0);
+console.log(total);
+
+//so reduce method is used to reduce the array into a single value.
+//it takes two parameter first is callback function and second is initial value of sum.
+
+
+//flat method in js is used to flat the array into single layer array.
+
+const categories=[
+    ["Laptop", "Mouse"],
+    ["Keyboard", "Monitor"]
+];
+
+const product = categories.flat(Infinity);
+console.log(product);
+
+
+//shellow copy and deep copy in js
+const user1=[
+    {name:"vishesh", age:20},
+    {name:"rohit", age:21}
+]
+
+const user2=[...user1];
+console.log(user2);
+console.log(user1==user2);
+console.log(user2[0]==user1[0]);
+console.log(user2[0].name);
+console.log(user1[0].name);
+
+
+console.log(user2[0].name="vishesh unadkat");
+console.log(user2[0].name);
+console.log(user1[0].name);
+
+//so in js when we copy an array of object using spread operator 
+//it will create a new array but the object inside the array will be same 
+//so if we change the object inside the new array it will also change the object inside the old array.
+//so this is called shallow copy in js.
+
+//so to create a deep copy of an array of object we can use map method in js.
+
+
+//deep copy
+
+const originalUser = {
+  name: "Alice",
+  location: { city: "New York" }
+};
+
+// const deepCopy = structuredClone(originalUser);
+const deepCopy = JSON.parse(JSON.stringify(originalUser));
+
+deepCopy.location.city = "Miami";
+console.log(originalUser.location.city); // "New York" -> (Safe! Completely independent)
