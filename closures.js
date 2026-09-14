@@ -43,7 +43,7 @@ console.log(name);
 
 function outerFunction()
 {
-    const msg="Hello from outer function";;
+    const msg="Hello from outer function";
 
     function innerFunction()
     {
