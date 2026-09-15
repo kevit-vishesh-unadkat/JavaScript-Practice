@@ -41,6 +41,11 @@ const availableProduct=products.filter(product=>{
 });
 
 console.log(availableProduct);
+
+const selectedProduct=products.filter(product=>{
+    return product.name==="Coffee Maker";
+});
+console.log(selectedProduct);
 // console.log(products);
 
 

@@ -19,7 +19,7 @@ console.log("Hi I am vishesh And below is my github account.")
 async function fetchData()
 {
     console.log("Fetch the data from the api");
-    const response=await fetch('https://api.example.com/data');
+    const response=await fetch('http://codecademy.com');
     const data=await response.json();
     return data;
 }
