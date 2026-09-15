@@ -82,3 +82,44 @@ const areAllItemsINStock=products.every(product=>{
 });
 
 console.log(areAllItemsINStock);
+
+
+
+//curring function in javascript
+
+//curring is usefull in js to breakdown in complex function call into smaller , more manageble  steps
+
+
+// function add(a,b)
+// {
+//     return a+b;
+// }
+
+// console.log(add(4,5));
+
+
+function add(a){
+    return function(b)
+    {
+        return a+b;
+    }
+}
+
+const addTwo=add(5);
+console.log(addTwo(4));
+
+
+function addition(a)
+{
+    return function(b)
+    {
+        return function(c)
+        {
+            return a+b+c;
+        }
+    }
+}
+
+const threeAdd=addition(6);
+const threeAdition=threeAdd(5);
+console.log(threeAdition(4));
