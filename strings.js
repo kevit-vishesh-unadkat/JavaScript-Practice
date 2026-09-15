@@ -51,3 +51,20 @@ console.log(str.slice(-5,-2));
 
 //splice operation in js
 
+//differnce b/w slice and substr
+//slice is allowed negative indexing but substring is not allowed negative indexing
+
+
+//string iteration
+
+const text="Hello";
+
+for (let n of text){
+    console.log(n);
+}
+
+//second method
+
+for(let i=0;i<text.length;i++){
+    console.log(text[i]);
+}

@@ -85,5 +85,62 @@ console.log(c.name);
 //so changes happen in c or a it will reflect to onther.
 
 
-//Objects and JSON
+//object destructuring
 
+const user2={
+    name:"vishesh",
+    age:21,
+    city:"rajkot"
+};
+
+const {name,city} =user2;
+
+console.log(user2.name);
+console.log(user2.city);
+
+const user3={
+    name1:"nirmit",
+    age:17,
+    city:"Rajkot"
+};
+
+const {name1 , ...otherData}=user3;
+console.log(name1);
+console.log(otherData);
+console.log(Object.keys(user3));
+console.log(Object.values(user3));
+
+console.log("name1" in user3);
+
+
+//for.. in 
+
+const stu={
+    name:"vishesh",
+    age:21
+}
+
+for (const key in stu)
+{
+    console.log(key,stu[key]);
+}
+
+
+//prototype
+
+const d={
+    name:"vishesh",
+    age:23,
+    greet:function()
+    {
+        console.log("Hello Ji!");
+    }
+}
+
+const e={
+    name:"yug",
+}
+
+d.__proto__(e);
+
+console.log(e);
