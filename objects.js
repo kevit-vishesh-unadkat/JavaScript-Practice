@@ -128,19 +128,33 @@ for (const key in stu)
 
 //prototype
 
-const d={
-    name:"vishesh",
-    age:23,
-    greet:function()
-    {
-        console.log("Hello Ji!");
-    }
+// const d={
+//     name:"vishesh",
+//     age:23,
+//     greet:function()
+//     {
+//         console.log("Hello Ji!");
+//     }
+// }
+
+// const e={
+//     name:"yug",
+// }
+
+// d.__proto__(e);
+
+// console.log(e);
+
+const car={
+    name2:"Honada",
+    model:"civic",
+    yer:2021
 }
 
-const e={
-    name:"yug",
+console.log(Object.keys(car));
+console.log(Object.values(car));
+
+for (const [key,value] of Object.entries(car))
+{
+    console.log(`${key}:${value}`)
 }
-
-d.__proto__(e);
-
-console.log(e);
